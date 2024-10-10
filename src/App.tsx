@@ -46,13 +46,15 @@ function App() {
       </div>
       <div>
         <button
-          onClick={() =>
+          onClick={() => {
+            const sortedArr = arr.sort((a, b) => a - b);
             alert(`
-          Array: [${arr}]
-          Target: ${target}
-          Index: ${binarySearch(arr, target)}
-          `)
-          }
+                Array: [${arr}]
+                Array Sorted: [${sortedArr}]
+                Target: ${target}
+                Index: ${binarySearch(sortedArr, target)}
+            `);
+          }}
         >
           Search
         </button>
